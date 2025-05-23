@@ -15,7 +15,6 @@ def chunk_text(text, chunk_size=500, overlap=50):
     if not isinstance(text, str):
         return []
 
-    # Clean up whitespace
     text = re.sub(r'\s+', ' ', text).strip()
 
     chunks = []

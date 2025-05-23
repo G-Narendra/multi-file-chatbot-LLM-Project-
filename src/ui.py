@@ -4,10 +4,9 @@ from src.chunking import chunk_text
 from src.retrieval import create_vector_store
 from src.chatbot import get_chat_response
 
-# Set Streamlit page configuration
+
 st.set_page_config(page_title="Multi-File Chatbot", layout="wide")
 
-# --- Sidebar: File Upload Section ---
 with st.sidebar:
     st.header("📂 Upload Files")
     uploaded_files = st.file_uploader(
@@ -21,7 +20,6 @@ with st.sidebar:
         vector_store = create_vector_store([chunk for sublist in chunks for chunk in sublist])
         st.success(f"✅ Loaded {len(raw_documents)} document(s) successfully!")
 
-# --- Main Section: Chat Interface ---
 st.title("🤖 Multi-File Chatbot")
 
 col1, col2, col3 = st.columns([1, 2, 1])  # Center-align main content
