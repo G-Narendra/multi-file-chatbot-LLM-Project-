@@ -1,0 +1,22 @@
+# Ignore environment files
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folders
+venv/
+.env/
+
+# Ignore model and vector store files
+models/vectorstore.pkl
+
+# Ignore logs
+logs/chat_history.log
+
+# Ignore Streamlit's cache
+.streamlit/
+
+# Ignore data uploads
+data/*
